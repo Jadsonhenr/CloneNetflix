@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Filmes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .movie {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .movie img {
+            max-width: 150px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .movie-details {
+            max-width: calc(100% - 170px);
+        }
+        .movie h2 {
+            margin: 0 0 10px;
+        }
+        .movie p {
+            margin: 5px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .video-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .video-popup video {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #fff;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Catálogo de Filmes</h1>
+        
+        <div class="movie" onclick="showVideo('img/RybLZnYptThaHaGI.mp4')">
+            <img src="/img/filmesImg/2.jpg" alt="Poster do Filme 1">
+            <div class="movie-details">
+                <h2>Título do Filme 1</h2>
+                <p><strong>Gênero:</strong> Ação</p>
+                <p><strong>Diretor:</strong> Nome do Diretor</p>
+                <p><strong>Ano:</strong> 2021</p>
+                <p><strong>Sinopse:</strong> Sinopse do filme 1...</p>
+            </div>
+        </div>
+
+        <div class="movie" onclick="showVideo('/img/Bibi Babydoll - OnlyFans _ Eu não nasci pra trabalhar como CLT (prod. d.silvestre).mp4')">
+            <img src="/img/filmesImg/3.jpg" alt="Poster do Filme 2">
+            <div class="movie-details">
+                <h2>Título do Filme 2</h2>
+                <p><strong>Gênero:</strong> Comédia</p>
+                <p><strong>Diretor:</strong> Nome do Diretor</p>
+                <p><strong>Ano:</strong> 2020</p>
+                <p><strong>Sinopse:</strong> Sinopse do filme 2...</p>
+            </div>
+        </div>
+
+        <div class="movie" onclick="showVideo('video3.mp4')">
+            <img src="poster3.jpg" alt="Poster do Filme 3">
+            <div class="movie-details">
+                <h2>Título do Filme 3</h2>
+                <p><strong>Gênero:</strong> Drama</p>
+                <p><strong>Diretor:</strong> Nome do Diretor</p>
+                <p><strong>Ano:</strong> 2019</p>
+                <p><strong>Sinopse:</strong> Sinopse do filme 3...</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Catálogo de Filmes. Todos os direitos reservados.</p>
+        </div>
+    </div>
+
+    <div class="video-popup" id="videoPopup">
+        <div class="close-btn" onclick="closeVideo()">X</div>
+        <video id="videoPlayer" controls></video>
+    </div>
+
+    <script>
+        function showVideo(src) {
+            var videoPopup = document.getElementById('videoPopup');
+            var videoPlayer = document.getElementById('videoPlayer');
+            videoPlayer.src = src;
+            videoPopup.style.display = 'flex';
+        }
+
+        function closeVideo() {
+            var videoPopup = document.getElementById('videoPopup');
+            var videoPlayer = document.getElementById('videoPlayer');
+            videoPlayer.pause();
+            videoPlayer.src = '';
+            videoPopup.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

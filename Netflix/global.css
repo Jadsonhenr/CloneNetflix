@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    box-sizing: border-box; /* Adicionado para garantir que o padding e a borda sejam incluídos nas dimensões totais do elemento */
+    color: #fff;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover; /* Alterado para cobrir toda a tela */
+    background-position: center; /* Centralizar a imagem de fundo */
+       
+}
+
+body::before {
+    content: '';
+    background-color: rgba(0, 0, 3, 0.5); /* Ajuste para semi-transparente */
+    width: 100%;
+    height: 108%;
+    position: absolute; /* Absoluto para cobrir o corpo */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Para garantir que fique atrás do conteúdo */
+}
+
+.conteine {
+    padding: 0px 0px;
+    z-index: 10;
+    transform: translateX(-170%);
+    margin-bottom: 43%;
+    
+    
+}
+
+.cabecalho__navegacao img {
+    
+    width: 130px;
+    height: auto; /* Manter proporção */
+}
+
+.conteine {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 375px;
+    padding: 6em 4em 0em 4em;
+    background-color: rgba(0, 0, 0, 0.72); /* Fundo semi-transparente para contraste */
+    border-radius: 5px;
+    box-sizing: border-box;
+    transform: translateX(-20%);
+    margin-top: 7em;
+    overflow: hidden;
+
+
+}
+section{
+    display: inline;
+    margin-top: 0%;
+    font-size: 16px;
+}
+
+.entrar h1{
+    text-align: left;
+    transform: translateY(-170%);
+    margin: 0 55em;
+    font-weight: 600;
+    position: relative; /* so assim para se move se ta doido, por causa da flex-dire */
+    left: -3.3%;
+}
+.form-lista-lista input {
+    display: block;
+    width: 100%;
+    border-radius: 2px;
+    padding: 13px;
+    margin-bottom: 1em; /* Espaçamento entre os campos */
+    background: #181a1985;
+    border: 1px solid #917171;
+    color: #fff;
+    transform: translateY(-48%);
+}
+.botoes{
+    transform: translateY(-15%);
+}
+.bnt {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background:  #f8030f;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center;
+}
+.bnt:hover {
+    background-color: #f6121d;
+}
+.ou{
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    margin-bottom:15px;
+    font-weight: 400;
+    color: #b8c7c5;
+}
+
+
+.bnt-code{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    background: #596a6b8a;
+    border-radius: 5px;
+    color: #ffffff;
+}
+.bnt-code:hover{
+    background-color: #5e7d7e69;
+    cursor: pointer;
+
+}
+
+.ancura a {
+    color: #f3f5f7;
+    text-decoration: none;
+    font-size: 12px;
+    margin-left: 30%;
+}
+
+.suport {
+    margin-top: 20px;
+    transform: translateY(-25%);
+}
+
+.remember {
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+
+.usernew__assina {
+    font-size: 12px;
+    margin-top: 20px;
+ 
+}
+
+.usernew__assina a {
+    margin-bottom: 20%;
+    text-decoration: none;
+}
+
+.saibaMais a {
+    color: #0071eb;
+    text-decoration: none;
+}
+.termos p{
+    font-size: 10px;
+    margin: 1em 0 ;
+    color: #668a8b;
+}
+.termos a{
+    color: #8441d1;
+    text-decoration: none;
+}

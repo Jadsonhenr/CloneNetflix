@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="shortcut icon" href="/netflix.ico" type="image/x-icon">
+    <link rel="stylesheet" href="src/components/header/styles.css">
+    <link rel="stylesheet" href="src/components/main/styles.css">
+    <link rel="stylesheet" href="/src/components/main/carrossel.css">
+</head>
+<body>
+    <header class="conteine">
+        <div class="conteine__div">
+            <nav class="navegacao">
+                <div class="logo">
+                    <a href="#">
+                        <img src="/src/assets/images/netflixlogo.png" alt="Logo Netflix">
+                    </a>
+                </div>
+                <section class="navegacao__listas">
+                    <ul class="navegacao__listas__links">
+                        <li><a href="/index.html">Inicio</a></li>
+                        <li><a href="#">Séries</a></li>
+                        <li><a href="#">Filmes</a></li>
+                        <li><a href="#">Mais recentes</a></li>
+                        <li><a href="#">Minhas listas</a></li>
+                    </ul>
+                    <ul class="navegacao__listas__left">
+                        <li><img class="Search" src="/src/assets/images/Search.png" alt="Lupa de pesquisa"></li>
+                        <li><a href="#">Infantil</a></li>
+                        <li><img class="NotificationBell" src="/src/assets/images/NotificationBell.png" alt="notificação"></li>
+                        <li><img class="GiftBox" src="/src/assets/images/GiftBox.png" alt="Presente"></li>
+                        <li><img src="/src/assets/images/ProfileIMG.png" alt="Perfil"></li>
+                        <li><img class="DownArrow" src="/src/assets/images/DownArrow.png" alt="#"></li>
+                    </ul>
+                </section>
+            </nav>
+        </div>
+    </header>
+    <main class="conteudo">
+        <section>
+            <article class="conteudo-div" id="backgroud">
+                <video id="backgroudVideo" loop autoplay muted>
+                    <source src="/background/TRAILER _ BERSERK_ THE BLACK SWORDSMAN - 2025 𒉭 (Studio ECLYPSE) (1).mp4" type="video/mp4">
+                </video>
+            </article>
+            <section class="conteudo__section">
+                <div class="conteudo__cabecalho">
+                    <h1>BERSECK</h1>
+                </div>
+                <div class="conteudo__Sobcabecalho">
+                    <!--<img src="/img/Top10Badge.png" alt="">-->
+                    <h2>Primeiro lugar no Brasil</h2>
+                </div>
+                <div class="conteudo__paragrafo">
+                    <p>O filme apresenta Mario e Luigi como irmãos que deixam um 
+                        emprego estável para criar a própria empresa de encanamento.
+                         Durante um serviço, eles acabam puxados por um cano verde que os leva a um universo mágico ameaçado pelo maligno Bowser</p>
+                </div>
+                <article class="conteudo__interacao">
+                    <button class="conteudo__interacao__botao"> 
+                        <img src="/src/assets/images/Play.png" alt="Assistir">
+                        Assistir
+                    </button>
+                    <button class="conteudo__interacao__botao1">
+                        <img src="/src/assets/images/Detail.png" alt="Assistir">
+                        Mais informações
+                    <button>
+                </article>
+            </section>
+            <article class="Com__Sem">
+                <button onclick="mudarImagem()" id="somBackground" class="somBackground">
+                    <img id="trocaImg" src="/src/assets/images/sem-som.png" alt="">
+                <button>
+            </article>
+            <section class="conteudo-carrossel">
+                <h3>Populares da Netflix</h3>
+                <div class="carousel-container">
+                    <button class="prev-btn"><img src="/src/assets/images/ArrowLeft.png" alt=""></button>
+                    <div class="carousel">
+                        <div class="carousel-item"><img src="/src/assets/capa-films/1.jpg" alt="Filme 1" onclick="showVideo('src/assets/films/RybLZnYptThaHaGI.mp4')" ></div>
+                        <div class="carousel-item"><img src="/src/assets/capa-films/furioza.jpg" onclick="showVideo('src/assets/films/Furiosa.A.Mad.Max.Saga.2024.1080p.HDCAM.Dublado.V.2 copy.mkv')" alt="Filme 2"></div>
+                        <div class="carousel-item"><img src="/src/assets/capa-films/3.jpg" onclick="showVideo('src/assets/films/Túmulo dos Vagalumes (1988).mp4')" alt="Filme 3"></div>
+                        <div class="carousel-item"><img src="/src/assets/capa-films/4.jpg" alt="Filme 4"></div> 
+                        <div class="carousel-item"><img src="/src/assets/capa-films/1.jpg" alt="Filme 5"></div>
+                    </div>
+                    <button class="next-btn"> <img src="/src/assets/images/ArrowRight.png" alt=""></button>
+                </div>
+            </section>
+            <section class="conteudo-carrossel" id="serie">
+                <h3>Filmes</h3>
+                <div class="carousel-container"
+                    <button class="prev-btn">&lt;</button>
+                    <div class="carousel">
+                        <div class="carousel-item"><img src="/src/assets/capa-films/MoviePoster (1).png" alt="Filme 1"></div>
+                        <div class="carousel-item"><img src="/src/assets/capa-films/tumuloDoVagalume.jpg" alt="Filme 2"></div>
+                        <div class="carousel-item"><img src="/src/assets/capa-films/princesa.jpg" alt="Filme 3"></div>
+                        <div class="carousel-item"><img src="/src/assets/capa-films/theWatchers.jpg" alt="Filme 4"></div>
+                        <div class="carousel-item"><img src="/src/assets/capa-films/tumuloDoVagalume.jpg" alt="Filme 5"></div>
+                    </div>
+                    <button class="next-btn">&gt;</button>
+                </div>
+                <article >
+                    <h3>Series</h3>
+                    <div class="carousel-container" id="filme">
+                        <button class="prev-btn">&lt;</button>
+                        <div class="carousel">
+                            <div class="carousel-item"><img src="/img/filmesImg/MoviePoster (1).png" alt="Filme 1" data-video="http://localhost:5500/img/filmes.html"></div>
+                            <div class="carousel-item"><img src="/img/filmesImg/1.jpg" alt="Filme 2" data-video="http://localhost:5500/img/filmes.html"></div>
+                            <div class="carousel-item"><img src="/img/filmesImg/2.jpg" alt="Filme 3" data-video="http://localhost:5500/img/filmes.html"></div>
+                            <div class="carousel-item"><img src="/img/filmesImg/3.jpg" alt="Filme 4" data-video="http://localhost:5500/img/filmes.html"></div>
+                            <div class="carousel-item"><img src="/img/filmesImg/4.jpg" alt="Filme 5" data-video="http://localhost:5500/img/filmes.html"></div>
+                        </div>
+                        <button class="next-btn">&gt;</button>
+                    </div>
+                </article>
+            </section>      
+        </main>
+        <div class="footer">
+            <p>&copy; 2024 Catálogo de Filmes. Todos os direitos reservados.</p>
+            <p>&copy; 2024 Catálogo de Filmes. Todos os direitos Jadson henrique.</p>
+        </div>
+        <div class="video-popup" id="videoPopup">
+            <div class="close-btn" onclick="closeVideo()">X</div>
+            <video id="videoPlayer" controls></video>
+        </div>
+        <script src="/script.js"></script> 
+    </body>
+    </html>         
+    
